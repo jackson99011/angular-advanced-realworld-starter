@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1 col-xs-12">
         <form [formGroup]="post">
-          <fieldset class="form-group" ((ngSubmit)="createPost()")>
+          <fieldset class="form-group" (ngSubmit)="createPost()">
             <input
               class="form-control form-control-lg"
               type="text"
@@ -60,8 +60,7 @@
           </fieldset>
           <button type="submit"
           class="btn btn-lg btn-primary pull-xs-right"
-          [disabled]="post.invalid"
-          >
+          [disabled]="post.invalid">
             Create Post
           </button>
         </form>
